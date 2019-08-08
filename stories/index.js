@@ -209,6 +209,17 @@ storiesOf("Form", module)
 .addParameters({
   backgrounds: [{ name: "dark", value: "#222f3e", default: true }]
 })
-.add("Create", () => (<Form interviewers={interviewers} onSave={action("Save Button")} onCancel={action("Cancel Button")} onChange={action("setInterviewer")}/>))
+.add("Create", () => (<Form 
+  interviewers={interviewers} 
+  onSave={action("Save Button")} 
+  onCancel={action("Cancel Button")} 
+  onChange={action("setInterviewer")}/>))
 
-.add("Edit", () => ((<Form interviewers={interviewers} onSave={action("Save Button")} onCancel={action("Cancel Button")} interviewers={interviewers} onChange={action("setInterviewer")} name="Duncan It's Me!"  interviewer={1}/>)));
+.add("Edit", () => ((<Form 
+  interviewers={interviewers} 
+  onSave={action("Save Button")} 
+  onCancel={action("Cancel Button")} 
+  interviewers={interviewers} 
+  onChange={action("setInterviewer")} 
+  name="Duncan It's Me!"  
+  interviewer={1}/>)));

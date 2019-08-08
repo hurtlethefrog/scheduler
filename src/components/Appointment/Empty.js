@@ -8,7 +8,7 @@ export default function Empty(props) {
     class="appointment__add-button"
     src="images/add.png"
     alt="Add"
-    onClick={(event) => props.onAdd('button clicked')}
+    onClick={(event) => props.onAdd(props.mode)}
   />
 </main>
 }
