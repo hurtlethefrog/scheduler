@@ -9,15 +9,15 @@ export default function Form(props) {
   const [interv, setInterviewer] = useState(props.interviewer || null);
   const {interviewers, interviewer, onChange} = props;
 
-  const reset = () => {
-    setName("");
-    setInterviewer(null);
-  }
+  // const reset = () => {
+  //   setName("");
+  //   setInterviewer(null);
+  // }
 
-  const save = () => {
-    setName(name);
-    setInterviewer(interv);
-  }
+  // const save = () => {
+  //   setName(name);
+  //   setInterviewer(interv);
+  // }
 
 return <main className="appointment__card appointment__card--create">
   <section className="appointment__card-left">
@@ -35,8 +35,8 @@ return <main className="appointment__card appointment__card--create">
   </section>
   <section className="appointment__card-right">
     <section className="appointment__actions">
-      <Button onClick={(event) => props.onCancel(reset())} danger>Cancel</Button>
-      <Button onClick={(event) => props.onSave(save())} confirm>Save</Button>
+      <Button onClick={(event) => props.onCancel()} danger>Cancel</Button>
+      <Button onClick={(event) => props.onSave(name,interv)} confirm>Save</Button>
     </section>
   </section>
 </main>

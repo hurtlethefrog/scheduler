@@ -17,13 +17,13 @@ export default function Show(props) {
         class="appointment__actions-button"
         src="images/edit.png"
         alt="Edit"
-        onClick={(event) => props.onEdit("edit the appointment")}
+        onClick={(event) => props.onEdit()}
       />
       <img
         class="appointment__actions-button"
         src="images/trash.png"
         alt="Delete"
-        onClick={(event) => props.onDelete("delete the appointment?")}
+        onClick={(event) => props.onConfirmDelete()}
       />
     </section>
   </section>

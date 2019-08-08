@@ -17,24 +17,69 @@ const ERROR = "ERROR";
 const CREATE = "CREATE";
 const EDIT = "EDIT";
 const CONFIRM = "CONFIRM";
+const STATUS = "STATUS";
+const DELETE = "DELETE";
 
 export default function Appointment(props) {
   const {mode, transition, back} = useVisualMode(EMPTY)
-  console.log("mode from index" + mode)
+
+  const save = function(name, interviewer) {
+    const interview = {student:name, interviewer}
+    transition(STATUS, true)
+    props.bookInterview(props.id, interview).then(()=> transition(SHOW))  
+  }
+
+  const remove = function() {
+    transition(DELETE, true)
+    props.deleteInterview(props.id).then(()=> transition(EMPTY))
+  }
+
+  const confirm = function() {
+    transition(CONFIRM, true)
+  }
+
+  const edit = function() {
+    transition(EDIT)
+  }
+
   return <article className="appointment"> 
     <Header time={props.time}/>
   {mode === EMPTY && 
     <Empty onAdd={transition} mode={CREATE}/>}
+
   {mode === SHOW && (
     <Show
       student={props.interview.student}
       interviewer={props.interview.interviewer}
+      onConfirmDelete={confirm}
+      interview={props.interview}
+      onEdit={edit}
     />
   )}
+  {mode === CONFIRM && 
+  <Confirm onConfirm={remove} onCancel={back} message={"Are you sure you wish to delete this interview? This action cannot be undone."}/>}
+
+  {mode === STATUS &&
+  <Status message={"Saving"}/>}
+
+  {mode === EDIT &&
+  <Form
+  id={props.id}
+  interviewers={props.interviewers}
+  onCancel={back}
+  onSave={save}
+  name={props.interview.name}
+  interviewer={props.interview.interviewer}/>}
+
+  {mode === DELETE &&
+  <Status message={"Deleting"}/>}
+
   {mode === CREATE && 
     <Form 
-      interviewers={[]} 
+      id={props.id}
+      interviewers={props.interviewers} 
       onCancel={back}
+      onSave={save}
       />}
     {/* {props.interview ? 
       <Fragment>

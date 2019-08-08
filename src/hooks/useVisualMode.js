@@ -14,12 +14,10 @@ export function useVisualMode(val, replace) {
   }
 
   function back() {
-    console.log(history)
     if(!history.length) {
       return
-    }console.log("getting mode")
+    }
     setMode(history.pop())
-    console.log(history)
   }
   return {
     mode, 
