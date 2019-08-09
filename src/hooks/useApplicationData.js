@@ -88,7 +88,6 @@ useEffect(() => {
   }
   
   function deleteInterview(id) {
-    console.log(state)
     const removeInterview = {
       ...state,
       spots: state.days.spots - 1,
