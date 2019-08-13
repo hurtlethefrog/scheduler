@@ -12,7 +12,7 @@ export default function DayListItem({name, spots, setDay, selected}) {
     "day-list__item":true
   })
 
-  return <div className={itemClass} onClick={() => setDay(name)}>
+  return <div data-testid="day" className={itemClass} onClick={() => setDay(name)}>
        <h1>{name}</h1>
        <h2>
       {spots <= 0 &&

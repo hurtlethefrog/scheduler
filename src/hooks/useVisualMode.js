@@ -13,13 +13,14 @@ export function useVisualMode(val, skip) {
     setMode(val)
   }
 
-  function back() {
-    if(!history.length) {
-      return
+  const back = () => {
+    if (history.length > 1) {
+      console.log(history)
+      setMode(history[history.length - 2]);
+      setHistory(prev => [...prev.slice(0, prev.length - 1)]);
     }
-    setMode(history.pop())
-    setHistory(history => ([...history, val]))
-  }
+  };
+
   return {
     mode, 
     transition,

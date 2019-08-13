@@ -1,41 +1,14 @@
 import {React, useState, useEffect, useReducer} from "react";
 import axios from "axios";
 
-const SET_DAY = "SET_DAY"
-const SET_STATE = "SET_STATE"
-const BOOK_INTERVIEW = "BOOK_INTERVEW"
-const DELETE_INTERVIEW = "DELETE_INTERVIEW"
-const SET_DAYS = "SET_DAYS"
+import reducer, {
+  SET_DAY,
+  SET_STATE,
+  BOOK_INTERVIEW,
+  DELETE_INTERVIEW,
+  SET_DAYS
+} from "reducers/application";
 
-function reducer(state, action) {
-  const {days, appointments, type, interviewers, day } = action;
-
-  switch (type) {
-    case SET_DAY :
-      return {...state, day};
-    case SET_DAYS :
-      return {...state, days};
-    case SET_STATE :
-      return {
-          ...state,
-        days, 
-        appointments, 
-        interviewers
-      };
-    case BOOK_INTERVIEW :
-      return {
-        ...state,
-        appointments,
-        interviewers 
-      };
-    case DELETE_INTERVIEW : 
-      return {
-        ...state,
-        appointments,
-        interviewers
-      };
-  }
-}
 export function useApplicationData() {
 const [state, dispatch] = useReducer(reducer, {
   day: "Monday",
