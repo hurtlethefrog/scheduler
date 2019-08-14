@@ -26,5 +26,5 @@ npm run storybook
 
 ## Short Video
 
-(Video showing some of the basic functionality)[https://www.loom.com/share/537390ce43e24ddfbbbe92cfe23ff6e5]
+![Video showing some of the basic functionality](https://www.loom.com/share/537390ce43e24ddfbbbe92cfe23ff6e5)
 
