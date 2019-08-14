@@ -1,5 +1,7 @@
 # Interview Scheduler
 
+A React single page application designed to allow students to book time with mentors via appointments.  
+
 ## Setup
 
 Install dependencies with `npm install`.
@@ -21,3 +23,8 @@ npm test
 ```sh
 npm run storybook
 ```
+
+## Short Video
+
+(Video showing some of the basic functionality)[https://www.loom.com/share/537390ce43e24ddfbbbe92cfe23ff6e5]
+

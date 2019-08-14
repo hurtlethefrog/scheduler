@@ -139,7 +139,6 @@ it("defaults to Monday and changes the schedule when a new day is selected", asy
     axios.delete.mockRejectedValueOnce();
 
     const { container, debug } = render(<Application />);
-    console.log(prettyDOM(container));
     await waitForElement(() => getByText(container, "Lydia Miller-Jones"));
 
     const appointment = getAllByTestId(container, "appointment").find(
