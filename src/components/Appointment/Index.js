@@ -1,4 +1,4 @@
-import React, {Fragment} from "react";
+import React from "react";
 import Header from "./Header";
 import Empty from "./Empty";
 import Show from "./Show";
@@ -41,7 +41,7 @@ export default function Appointment(props) {
   }
 
   const confirm = function() {
-    transition(CONFIRM, true)
+    transition(CONFIRM)
   }
 
   const edit = function() {

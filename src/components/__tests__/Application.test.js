@@ -20,9 +20,9 @@ import axios from "axios";
 
 import Application from "components/Application";
 
-afterEach(cleanup);
 
 describe("Application tests", () => {
+  beforeEach(cleanup);
 it("defaults to Monday and changes the schedule when a new day is selected", async () => {
     const { getByText } = render(<Application />);
 
@@ -140,10 +140,10 @@ it("defaults to Monday and changes the schedule when a new day is selected", asy
 
     const { container, debug } = render(<Application />);
     console.log(prettyDOM(container));
-    await waitForElement(() => getByText(container, "Archie Cohen"));
+    await waitForElement(() => getByText(container, "Lydia Miller-Jones"));
 
     const appointment = getAllByTestId(container, "appointment").find(
-      appointment => queryByText(appointment, "Archie Cohen")
+      appointment => queryByText(appointment, "Lydia Miller-Jones")
     );
 
     fireEvent.click(queryByAltText(appointment, "Delete"));
