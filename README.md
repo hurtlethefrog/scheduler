@@ -1,6 +1,6 @@
 # Interview Scheduler
 
-A React single page application designed to allow students to book time with mentors via appointments.  
+A React single page application designed to allow students to book time with mentors via appointments. Storybook and Cypress used for integration/end to end testing, and Jest used for unit testing. Project includes the use of the newly introcued React hooks to handle state.
 
 ## Setup
 
@@ -16,12 +16,6 @@ npm start
 
 ```sh
 npm test
-```
-
-## Running Storybook Visual Testbed
-
-```sh
-npm run storybook
 ```
 
 ## Short Video
