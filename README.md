@@ -20,5 +20,5 @@ npm test
 
 ## Short Video
 
-![Video showing some functionality](https://www.loom.com/share/537390ce43e24ddfbbbe92cfe23ff6e5)
+[Video showing some functionality](https://www.loom.com/share/537390ce43e24ddfbbbe92cfe23ff6e5)
 
