@@ -24,20 +24,20 @@ npm test
 
 ## Screen Shots
 
-[Home page](/home/lhl/lighthouse/w7/scheduler-master/docs/main-view.png)
+![Home page](https://github.com/SebDufresne/scheduler/blob/master/docs/main-view.png)
 
-[Mobile view](/home/lhl/lighthouse/w7/scheduler-master/docs/adaptive-design.png)
+![Mobile view](https://github.com/SebDufresne/scheduler/blob/master/docs/adaptive-design.png)
 
-[Adding an appointment](/home/lhl/lighthouse/w7/scheduler-master/docs/add-appointment.png)
+![Adding an appointment](https://github.com/SebDufresne/scheduler/blob/master/docs/add-appointment.png)
 
-[Relevant error messages](/home/lhl/lighthouse/w7/scheduler-master/docs/contextual-errors.png)
+![Relevant error messages](https://github.com/SebDufresne/scheduler/blob/master/docs/contextual-errors.png)
 
-[Confirmation messages](/home/lhl/lighthouse/w7/scheduler-master/docs/deletion-confirmation.png)
+![Confirmation messages](https://github.com/SebDufresne/scheduler/blob/master/docs/deletion-confirmation.png)
 
-[Server error handling](/home/lhl/lighthouse/w7/scheduler-master/docs/error-handling.png)
+![Server error handling](https://github.com/SebDufresne/scheduler/blob/master/docs/error-handling.png)
 
-[Storybook testing](/home/lhl/lighthouse/w7/scheduler-master/docs/mockup-storybook.png)
+![Storybook testing](https://github.com/SebDufresne/scheduler/blob/master/docs/mockup-storybook.png)
 
-[End-to-end Cypress testing](/home/lhl/lighthouse/w7/scheduler-master/docs/tests-cypress.png)
+![End-to-end Cypress testing](https://github.com/SebDufresne/scheduler/blob/master/docs/tests-cypress.png)
 
-[Jest unit testing coverage](/home/lhl/lighthouse/w7/scheduler-master/docs/tests-jest.png)
+![Jest unit testing coverage](https://github.com/SebDufresne/scheduler/blob/master/docs/tests-jest.png)
